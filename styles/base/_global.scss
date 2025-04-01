@@ -1,0 +1,10 @@
+@use "../abstracts/colors" as *;
+
+a {
+    color: inherit;
+}
+
+body {
+    color: $primary-btn-color;
+    background-color: $primary-background-color;
+}

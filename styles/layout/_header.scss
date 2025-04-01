@@ -1,0 +1,207 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/colors" as *;
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+header {
+    @include flex(row, space-between, center);
+    font-family: $font-main;
+    font-size: $primary-font-size;
+    color: $font-color;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: $head-padding;
+    background-color: $primary-background-color;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s ease;
+
+    &.hide {
+        transform: translateY(-100%);
+    }
+
+    .header-left {
+        @include flex(row, center, center, $head-gap);
+
+        img {
+            max-height: 80px;
+        }
+
+        nav {
+            ul {
+                @include flex (row, space-between, center, $head-gap);
+
+                li {
+                    list-style: none;
+
+                    a {
+                        position: relative;
+                        text-decoration: none;
+                        color: inherit;
+                        transition: color 0.3s ease;
+                      
+                        &::after {
+                          content: "";
+                          position: absolute;
+                          bottom: -2px;
+                          left: 0;
+                          width: 0;
+                          height: 2px;
+                          background-color: $secondary-btn-color;
+                          transition: width 0.5s ease;
+                        }
+                      
+                        &:hover::after {
+                          width: 100%;
+                        }
+                    }          
+                }
+            }
+        }
+
+        .close-btn {
+            display: none;
+          }
+    }
+
+    .header-right {
+        @include flex(row, center, center, 7rem);
+
+        .social {
+            @include flex(row, center, center,$head-gap-sm);
+
+            a {
+                text-decoration: none;
+
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .user-action {
+            @include flex(row, center, center, $head-gap-sm);
+        }
+
+        a {
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+          
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -2px;
+              left: 0;
+              width: 0;
+              height: 2px;
+              background-color: $secondary-btn-color;
+              transition: width 0.5s ease;
+            }
+          
+            &:hover::after {
+              width: 100%;
+            }
+        }          
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    header {
+        @include flex (row, center, center);
+        padding: 4rem;
+        background: none;
+        box-shadow: none;
+
+        .header-left {
+            width: 100%;
+            justify-content: space-between;
+
+            img {
+                display: none;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 30vw;
+                background-color: $primary-background-color;
+                transition: left 0.3s ease;
+                padding: 3rem 2rem;
+                z-index: 9999;
+                border-top-right-radius: $head-mobile-radius;
+                border-bottom-right-radius: $head-mobile-radius;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                ul {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 100%;
+                    margin-top: 3rem;
+
+                    li {
+                        width: 100%;
+                        margin-bottom: 2rem;
+
+                        a {
+                            font-size: 2rem;
+                            display: block;
+                            color: $font-color;
+                        }
+                    }
+                }
+            }
+
+            .close-btn {
+                align-self: flex-start;
+                font-size: 3rem;
+                cursor: pointer;
+                color: $font-color;
+              }
+              
+
+            .burger {
+                display: block;
+                cursor: pointer;
+                z-index: 10000;
+
+                span {
+                    display: block;
+                    width: 25px;
+                    height: 3px;
+                    background-color: $primary-background-color;
+                    margin: 5px 0;
+                    transition: 0.3s;
+                }
+            }
+
+            &.open {
+                nav {
+                    left: 0;
+                }
+            }
+        }
+
+        .header-right {
+            color: $primary-background-color;
+
+            a:first-child {
+                display: none;
+            }
+
+            .user-action {
+                display: none;
+            }
+        }
+    }
+}

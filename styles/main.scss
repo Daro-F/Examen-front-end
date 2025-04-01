@@ -1,0 +1,111 @@
+// Import des variables et mixins
+@use "abstracts/variables" as *;
+@use "abstracts/colors" as *;
+@use "abstracts/mixins" as *;
+@use "abstracts/functions" as *;
+@use "abstracts/placeholders" as *;
+@use "abstracts/typography" as *;
+// Import des bases
+@use "base/reset";
+@use "base/reset-typography";
+@use "base/global";
+// Import des layouts
+@use "layout/header";
+@use "layout/footer";
+@use "layout/grid";
+@use "layout/forms";
+@use "layout/sidebar";
+//  Import des composants
+//  Import buttons
+@use "components/buttons/primary";
+@use "components/buttons/secondary";
+@use "components/buttons/switch";
+//  Import cards
+@use "components/cards/plan-card";
+//  Import modals
+@use "components/modals/modal";
+//  Import others
+@use "components/alerts";
+@use "components/badges";
+@use "components/breadcrumbs";
+@use "components/carousel";
+@use "components/dropdown";
+@use "components/pagination";
+//  Import des pages spécifiques
+@use "pages/home";
+@use "pages/about";
+@use "pages/contact";
+@use "pages/blog";
+@use "pages/page-404";
+//  Import des thèmes
+@use "themes/light";
+@use "themes/dark";
+//  Import des utilitaires
+@use "utils/animations";
+@use "utils/spacing";
+@use "utils/accessibility";
+@use "utils/helpers";
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+                                                            margin-bottom: 100rem; /////////////////////////////////////////////////////////////////
+  
+    #hero-video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to left, rgba(54, 58, 43, 0.7), rgba(0, 0, 0, 0));
+        pointer-events: none;
+        z-index: 1;
+      }
+  
+    .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -50%);
+        text-align: right;
+        width: 75vw;
+        color: white;
+        z-index: 2;
+    }
+  
+    .title h1 {
+        font-size: $size-title;
+        color: $title-color;
+    }
+  
+    .title p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        .title {
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 60vw;
+            line-height: 1.5;
+        }
+
+        .title h1 {
+            font-size: $mobile-size-title;
+        }
+    }
+}
+
+
+  
+
+  
