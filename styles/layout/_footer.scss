@@ -1,0 +1,86 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/colors" as *;
+
+.footer-container {
+    @include flex(row, space-between, stretch, 2rem);
+    padding: 2rem 3rem;
+    background-color: #fff;
+    font-family: $font-main;
+  
+    .footer-column {
+        @include flex(column, space-between, flex-start, 1rem);
+        flex: 1;
+        max-width: 300px;
+  
+        img {
+            max-width: 200px;
+        }
+
+        .social i {
+            font-size: 1.5rem;
+        }
+          
+
+        p {
+            font-size: $secondary-font-size;
+        }
+
+        h4 {
+            font-family: $font-secondary;
+            font-size: $primary-font-size;
+        }
+  
+            ul {
+                list-style: none;
+                padding: 0;
+                
+    
+            li {
+                margin-bottom: 0.5rem;
+            }
+        }
+  
+        a {
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+  
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: $secondary-btn-color;
+                transition: width 0.5s ease;
+            }
+        
+            &:hover::after {
+                width: 100%;
+            }
+        }
+  
+        .social a {
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+  
+        .secondary-btn {
+            margin-top: 1rem;
+            display: inline-block;
+            background-color: #4e5b3a;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-align: center;
+    
+            &:hover {
+            background-color: #3e4a2f;
+            }
+        }
+    }
+}
+  

@@ -42,60 +42,60 @@
 }
 
 .creator-quote {
-    @include flex(row, center, stretch, 10rem); // ← clé pour que l'image suive le texte
-    margin-top: $page-marging;
+    @include flex(row, center, stretch, 10rem);
+    margin: $page-marging 0;
   
     .quote-texte {
-      width: 30%;
-      @include flex(column, flex-start, flex-start, 2rem);
+        width: 30%;
+        @include flex(column, flex-start, flex-start, 2rem);
   
-      h3 {
-        font-size: $h3-size;
-        font-family: $font-secondary;
-      }
-  
-      .quote-description {
-        position: relative;
-        font-family: $font-main;
-  
-        i {
-          font-size: 3rem;
-          margin-bottom: 1rem;
-          display: block;
+        h3 {
+            font-size: $h3-size;
+            font-family: $font-secondary;
         }
   
-        p {
-          margin-top: 1rem;
-          line-height: 1.6;
-        }
-      }
+        .quote-description {
+            position: relative;
+            font-family: $font-main;
   
-      .creator-name {
-        font-size: 0.95rem;
-        margin-top: 2rem;
-        font-family: $font-main;
-  
-        strong {
-          font-weight: 600;
+            i {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+                display: block;
+            }
+    
+            p {
+            margin-top: 1rem;
+            line-height: 1.6;
+            }
         }
   
-        p:last-child {
-          font-style: italic;
-          text-decoration: underline;
+        .creator-name {
+            font-size: 0.95rem;
+            margin-top: 2rem;
+            font-family: $font-main;
+    
+            strong {
+            font-weight: 600;
+            }
+    
+            p:last-child {
+            font-style: italic;
+            text-decoration: underline;
+            }
         }
-      }
     }
   
     .quote-image {
-      width: 30%;
+        width: 30%;
   
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        display: block;
-      }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
     }
-  }
+}
   
   

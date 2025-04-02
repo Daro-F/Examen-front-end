@@ -113,14 +113,14 @@ header {
 
 @media screen and (max-width: 1260px) {
     header {
-        @include flex (row, center, center);
+        @include flex(row, space-between, center);
         padding: 4rem;
         background: none;
         box-shadow: none;
 
         .header-left {
-            width: 100%;
-            justify-content: space-between;
+            width: auto;
+            @include flex(row, flex-start, center, $head-gap);
 
             img {
                 display: none;
@@ -155,7 +155,6 @@ header {
 
                         a {
                             font-size: 2rem;
-                            display: block;
                             color: $font-color;
                         }
                     }
@@ -173,7 +172,6 @@ header {
             .burger {
                 display: block;
                 cursor: pointer;
-                z-index: 10000;
 
                 span {
                     display: block;
@@ -188,6 +186,11 @@ header {
             &.open {
                 nav {
                     left: 0;
+                    border: solid 1px $primary-btn-color;
+                    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+                    backdrop-filter: blur(8px); // ← effet de flou
+                    background-color: rgba($primary-background-color, 0.7);
+
                 }
             }
         }
