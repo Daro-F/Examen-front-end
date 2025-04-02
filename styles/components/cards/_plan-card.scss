@@ -10,7 +10,7 @@
     font-family: $font-main;
     @include flex (row, center, center, 12rem);
     margin-top: 7rem;
-    padding-left: 18rem;
+    padding-left: $main-pading;
 
     .hotel-container {
         @include flex (column, center, flex-start, $head-gap);

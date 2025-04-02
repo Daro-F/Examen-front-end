@@ -312,6 +312,152 @@ header .header-right a:hover::after {
     gap: 0;
   }
 }
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 16rem;
+}
+.hero #hero-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, rgba(54, 58, 43, 0.7), rgba(54, 58, 43, 0.1));
+  z-index: 1;
+}
+.hero .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  text-align: right;
+  width: 75vw;
+  z-index: 2;
+}
+.hero .title h1 {
+  font-size: 100px;
+  color: #D9C7B3;
+}
+.hero .title p {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .hero .title {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 60vw;
+    line-height: 1.5;
+  }
+  .hero .title h1 {
+    font-size: 50px;
+  }
+}
+.about {
+  margin-top: 12rem;
+}
+.about .about-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+.about .about-columns .about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 30%;
+}
+.about .about-columns .about-container h3 {
+  font-size: 48px;
+  font-family: "Playfair";
+}
+.about .about-columns .about-container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  line-height: 1.6;
+}
+.about .about-columns .about-container .content .image {
+  width: 100%;
+}
+.about .about-columns .about-container .content .image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.about .about-columns .about-container .content p {
+  font-family: "Karla";
+}
+
+.creator-quote {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 10rem;
+  margin-top: 12rem;
+}
+.creator-quote .quote-texte {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.creator-quote .quote-texte h3 {
+  font-size: 48px;
+  font-family: "Playfair";
+}
+.creator-quote .quote-texte .quote-description {
+  position: relative;
+  font-family: "Karla";
+}
+.creator-quote .quote-texte .quote-description i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+.creator-quote .quote-texte .quote-description p {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+.creator-quote .quote-texte .creator-name {
+  font-size: 0.95rem;
+  margin-top: 2rem;
+  font-family: "Karla";
+}
+.creator-quote .quote-texte .creator-name strong {
+  font-weight: 600;
+}
+.creator-quote .quote-texte .creator-name p:last-child {
+  font-style: italic;
+  text-decoration: underline;
+}
+.creator-quote .quote-image {
+  width: 30%;
+}
+.creator-quote .quote-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .primary-btn {
   background-color: #363A2B;
   border: none;
@@ -477,55 +623,6 @@ header .header-right a:hover::after {
   width: 600px;
   height: 80vh;
   object-fit: cover;
-}
-
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  margin-bottom: 16rem;
-}
-.hero #hero-video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to left, rgba(54, 58, 43, 0.7), rgba(54, 58, 43, 0.1));
-  z-index: 1;
-}
-.hero .title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-40%, -50%);
-  text-align: right;
-  width: 75vw;
-  z-index: 2;
-}
-.hero .title h1 {
-  font-size: 100px;
-  color: #D9C7B3;
-}
-.hero .title p {
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width: 768px) {
-  .hero .title {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 60vw;
-    line-height: 1.5;
-  }
-  .hero .title h1 {
-    font-size: 50px;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */

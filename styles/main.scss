@@ -15,6 +15,8 @@
 @use "layout/grid";
 @use "layout/forms";
 @use "layout/sidebar";
+@use "layout/banner";
+@use "layout/_hotel-presentation";
 //  Import des composants
 //  Import buttons
 @use "components/buttons/primary";
@@ -45,60 +47,3 @@
 @use "utils/spacing";
 @use "utils/accessibility";
 @use "utils/helpers";
-
-.hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 16rem; 
-  
-    #hero-video {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to left, rgba(54, 58, 43, 0.7), rgba(54, 58, 43, 0.1));
-        z-index: 1;
-      }
-  
-    .title {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-40%, -50%);
-        text-align: right;
-        width: 75vw;
-        z-index: 2;
-    }
-  
-    .title h1 {
-        font-size: $size-title;
-        color: $title-color;
-    }
-  
-    .title p {
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .hero {
-        .title {
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            width: 60vw;
-            line-height: 1.5;
-        }
-
-        .title h1 {
-            font-size: $mobile-size-title;
-        }
-    }
-}
