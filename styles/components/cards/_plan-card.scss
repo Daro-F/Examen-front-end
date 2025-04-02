@@ -76,7 +76,7 @@
   
     .hotel-container {
         @include flex(column, center, flex-start, $head-gap);
-        width: 50%;
+        width: 80%;
   
         .hotel-name {
             font-size: $card-font-size;
@@ -95,6 +95,10 @@
             color: $not-star;
             }
         }
+
+        .hotel-description {
+            width: 70%;
+        }
     }
   
     .carousel {
@@ -103,10 +107,6 @@
         overflow-x: auto;
         overflow-y: hidden;
         padding-bottom: 12px;
-        flex: 1 1 0%;
-        min-width: 0;
-        width: 50%;
-        max-width: 50%;
       
             &::-webkit-scrollbar {
             height: 10px;
@@ -122,8 +122,8 @@
             }
       
         .carousel-img {
-            flex: 0 0 ;
-            min-width: 600px;
+            flex: 0 0 auto;
+            width: 600px;
             height: 80vh;
             object-fit: cover;
         }

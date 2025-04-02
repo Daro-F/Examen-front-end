@@ -45,3 +45,4 @@ closeBtn.addEventListener('click', function() {
     header.classList.remove('menu-hide');
     burger.style.pointerEvents = 'auto';
 });
+

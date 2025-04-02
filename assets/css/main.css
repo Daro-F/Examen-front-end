@@ -428,7 +428,7 @@ header .header-right a:hover::after {
   justify-content: center;
   align-items: flex-start;
   gap: 3rem;
-  width: 50%;
+  width: 80%;
 }
 .hotel-card-reverse .hotel-container .hotel-name {
   font-size: 96px;
@@ -452,16 +452,15 @@ header .header-right a:hover::after {
 .hotel-card-reverse .hotel-container .hotel-rating .not {
   color: #BCBCBC;
 }
+.hotel-card-reverse .hotel-container .hotel-description {
+  width: 70%;
+}
 .hotel-card-reverse .carousel {
   display: flex;
   gap: 2rem;
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 12px;
-  flex: 1 1 0%;
-  min-width: 0;
-  width: 50%;
-  max-width: 50%;
 }
 .hotel-card-reverse .carousel::-webkit-scrollbar {
   height: 10px;
@@ -474,8 +473,8 @@ header .header-right a:hover::after {
   background-color: #4F6234;
 }
 .hotel-card-reverse .carousel .carousel-img {
-  flex: 0 0;
-  min-width: 600px;
+  flex: 0 0 auto;
+  width: 600px;
   height: 80vh;
   object-fit: cover;
 }
