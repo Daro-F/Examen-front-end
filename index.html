@@ -15,17 +15,22 @@
 
 <body>
 	<header id="header">
+
+		<!--Header GAUCHE-->
 		<div class="header-left">
 			<a href="./index.html">
+				<!-- LOGO -->
 				<img src="./assets/images/ui/logo-noir.png" alt="logo (4 elements hotels inouïs partout dans le monde) de couleur noir" title="Retour à l'accueil">
 			</a>
-			
+
+			<!-- Burger pour mobile / responsive -->
 			<div class="burger" id="burger-btn" aria-label="Menu mobile" aria-expanded="false">
 				<span></span>
 				<span></span>
 				<span></span>
 			</div>
 		  
+			<!-- Lien vers les pages -->
 			<nav>
 				<div class="close-btn">&times;</div>
 			  	<ul>
@@ -37,12 +42,16 @@
 			</nav>
 		</div>
 		  
+		<!-- Header DROITE -->
 		<div class="header-right">
+			<!-- Résaux -->
 			<div class="social">
 				<a href="./pages/contact.html" title="Nous contacter">Contact</a>
 				<a href="#" title="Suivez-nous sur Instagram"><i class="fab fa-instagram"></i></a>
 				<a href="#" title="Rejoignez-nous sur Facebook"><i class="fab fa-facebook-f"></i></a>
 			</div>
+
+			<!-- Réserver / Se connecter -->
 			<div class="user-action">
 				<button class="secondary-btn">Reserver</button>
 				<a href="#">Se connecter</a>
@@ -52,20 +61,28 @@
 
 	<main>
 
+		<!-------------- Banner --------------->
 		<section class="hero">
 			<div class="container">
+
+				<!-- Vidéo de fond -->
 				<video autoplay muted loop id="hero-video">
 					<source src="./assets/video/home.mp4">
 				</video>
+
+				<!-- Titre / Id des bouton "réserver" ici pour afficher le formulaire au milieu de l'écran -->
 				<div class="title" id="reservation">
 					<h1>Découvrez nos hôtels exceptionnels partout dans le monde.</h1>	
 				</div>
 			</div>
 
+			<!-- Formulaire -->
 			<div class="hero-search">
 				<div class="serch-box">
 					<h2><strong>Rechercher une disponibilité</strong></h2>
 					<form action="">
+
+						<!-- Choisir un hôtel -->
 						<div class="form-group">
 							<label for="hotel">Choisir un hôtel</label>
 							<select name="hotel" id="hotel">
@@ -77,33 +94,45 @@
 							</select>
 						</div>
 					
+						<!-- Nombre de personnes-->
 						<div class="form-group">
 							<label for="persons" id="personnes">Nbr de personnes</label>
 							<input type="number" id="persons" name="persons" value="2" min="1">
 						</div>
 					
+						<!-- Date d'arrivée-->
 						<div class="form-group">
 							<label for="arrival">Choisir une date d'arrivée</label>
 							<input type="date" id="arrival" name="arrival" value="2025-04-03">
 						</div>
 					</form>
+
+					<!-- Chercher -->
 					<button class="primary-btn">Chercher</button>
 				</div>
 			</div>
 	</section>
 
+	<!-------------- SECTION CARD --------------->
 	<section>
+		<!-------------- CARD 1 --------------->
 		<article class="hotel-card">
 			<div class="hotel-container">
+				
+				<!-- Titre de la card -->
 				<div class="hotel-info">
 					<h2 class="hotel-name">Hôtel Feu</h2>
 				</div>
-				<div class="hotel-rating" aria-label="Note de l'hôtel : 3 sur 4">
+				<div class="hotel-rating">
+
+					<!--Localisation-->
 					<div class="hotel-location">
 						<i class="fa-solid fa-location-dot"></i>
 						<p>Finlande</p>
 					</div>
-					<div class="dots">		
+
+					<!-- Dots -->
+					<div class="dots" aria-label="Note de l'hôtel : 3 sur 4">		
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
@@ -111,39 +140,50 @@
 						<span>(325 avis)</span>		
 					</div>
 				</div>
+
+				<!-- Description -->
 				<div>			
 					<p class="hotel-description">
 					L'hôtel Feu ne se situe bien sûr pas sur un volcan, mais en Finlande.</p>
 					<p>Feu de laterre volcanique crachant non loin de là ses geysers, feu des volcans à l'horizon et, bien entendu, feu des aurores boréales que vous pourrez admirer tous les soirs par le toit vitré de votre chambre.</p>
 				</div>
+
+				<!-- Reservation (ID vers formulaire)-->
 				<a href="#reservation" class="primary-btn">Reserver</a>
 			</div>
+
+			<!-- Carousel -->
 			<div class="carousel">
 				<img src="./assets/images/hotels/feu/igloos-laponie.jpg" alt="Igloos éclairés la nuit au milieu d'une forêt enneigée" class="carousel-img">				
 				<img src="./assets/images/hotels/feu/nuit-nordique.jpg" alt="Chalet nordique sous la neige avec aurores boréales dans le ciel" class="carousel-img">
 				<img src="./assets/images/hotels/feu/village-igloos.jpg" alt="Village d'igloos éclairés en pleine forêt enneigée au crépuscule" class="carousel-img">
 			  </div>					
 		</article>
-	</section>
 
+		<!-------------- CARD REVERSE 1 --------------->
+		<article class="hotel-card-reverse reverse">
 
-	<!-- CARD REVERSE -->
-	<section>
-		<article class="hotel-card-reverse">
-			<div class="carousel">
+			<!-- Carousel -->
+			<div class="carousel">				
+				<img src="./assets/images/hotels/air/tour-amazonie.jpg" alt="Hôtel perché en pleine canopée de la forêt amazonienne" class="carousel-img">	
 				<img src="./assets/images/hotels/air/pont-suspendu-jungle.jpg" alt="Traversée d'un pont suspendu au cœur de la jungle" class="carousel-img">
-				<img src="./assets/images/hotels/air/tour-amazonie.jpg" alt="Hôtel perché en pleine canopée de la forêt amazonienne" class="carousel-img">				
 			</div>			
 			<div class="hotel-container">
+
+				<!-- Titre de la card -->
 				<div class="hotel-info">
 					<h2 class="hotel-name">Hôtel Air</h2>
 				</div>
-				<div class="hotel-rating" aria-label="Note de l'hôtel : 3 sur 4">
+				<div class="hotel-rating">
+
+					<!--Localisation-->
 					<div class="hotel-location">
 						<i class="fa-solid fa-location-dot"></i>
 						<p>Brésil</p>
 					</div>
-					<div class="dots">		
+
+					<!-- Dots -->
+					<div class="dots" aria-label="Note de l'hôtel : 3 sur 4">		
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
@@ -151,28 +191,37 @@
 						<span>(325 avis)</span>		
 					</div>
 				</div>
+
+				<!-- Description -->
 				<div>			
 					<p class="hotel-description">
 						L'hôtel Air se situe à la frontière du Brésil et du Pérou.</p>
 						<p>C'est un concept architectural innovant qui a permis une implantation à la cîme de la forêt pour offrir un panorama vertigineux et cotoyerchaque matin, de votre chambre (avec ou sans piscine), les oiseaux à votre réveil.</p>
 				</div>
+
+				<!-- Reservation (ID vers formulaire)-->
 				<a href="#reservation" class="primary-btn">Reserver</a>
 			</div>
 		</article>
-	</section>
 
-	<section>
+		<!-------------- CARD 2 --------------->
 		<article class="hotel-card">
 			<div class="hotel-container">
+
+				<!-- Titre de la card -->
 				<div class="hotel-info">
 					<h2 class="hotel-name">Hôtel Terre</h2>
 				</div>
-				<div class="hotel-rating" aria-label="Note de l'hôtel : 3 sur 4">
+				<div class="hotel-rating">
+
+					<!--Localisation-->
 					<div class="hotel-location">
 						<i class="fa-solid fa-location-dot"></i>
 						<p>Thaïlande</p>
 					</div>
-					<div class="dots">		
+
+					<!-- Dots -->
+					<div class="dots" aria-label="Note de l'hôtel : 3 sur 4">		
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
@@ -180,36 +229,48 @@
 						<span>(325 avis)</span>		
 					</div>
 				</div>
-				<div>			
-					<p class="hotel-description">
+
+				<!-- Description -->
+				<div class="hotel-description">			
+					<p>
 						L'hôtel Terre est situé dans des grottes naturelles en Thaïlande. Retaillées et aménagées avec beaucoup de soin, les chambres de l'hôtel vous offriront soit la fraîcheur et l'apaisement à près de vingt mètres de profondeur, soit un hâvre de paix ouvrant sur l'horizon de la mer au loin.</p>
 				</div>
+
+				<!-- Reservation (ID vers formulaire)-->
 				<a href="#reservation" class="primary-btn">Reserver</a>
 			</div>
+
+			<!-- Carousel -->
 			<div class="carousel">
 				<img src="./assets/images/hotels/terre/chambre-safari.jpg" alt="Chambre dans la roche avec lits doubles et ambiance safari chaleureuse" class="carousel-img">				
 				<img src="./assets/images/hotels/terre/table-chandelles.jpg" alt="Table romantique dressée dans une grotte avec chandelles et fleurs" class="carousel-img">
-
-			  </div>					
+			</div>					
 		</article>
-	</section>
 
-	<section>
-		<article class="hotel-card-reverse">
+		<!-------------- CARD REVERSE 2 --------------->
+		<article class="hotel-card-reverse reverse">
+
+			<!-- Carousel -->
 			<div class="carousel">
 				<img src="./assets/images/hotels/eau/plongée-sous-marine.jpg" alt="Hôtel perché en pleine canopée de la forêt amazonienne" class="carousel-img">
 				<img src="./assets/images/hotels/eau/chambre-aquarium.jpg" alt="Traversée d'un pont suspendu au cœur de la jungle" class="carousel-img">
 			</div>			
 			<div class="hotel-container">
+
+				<!-- Titre de la card -->
 				<div class="hotel-info">
 					<h2 class="hotel-name">Hôtel Eau</h2>
 				</div>
-				<div class="hotel-rating" aria-label="Note de l'hôtel : 3 sur 4">
+				<div class="hotel-rating">
+
+					<!--Localisation-->
 					<div class="hotel-location">
 						<i class="fa-solid fa-location-dot"></i>
 						<p>Île du pacifique</p>
 					</div>
-					<div class="dots">		
+
+					<!-- Dots -->
+					<div class="dots" aria-label="Note de l'hôtel : 3 sur 4">		
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
@@ -217,10 +278,15 @@
 						<span>(325 avis)</span>		
 					</div>
 				</div>
-				<div>			
-					<p class="hotel-description">
-						L'hôtel Eau est situé sur une île de 2 kilomètres carrés très exactement équidistante de Vladivostok et de Los Angeles. C'est le milieu duPacifique. Vous y disposerez de votre plage, de votre bateau et de votre majordome privés. Votre chambre est un caisson immergé à deux mètres sous l'eau.</p>
+
+				<!-- Description -->
+				<div class="hotel-description">			
+					<p >
+						L'hôtel Eau est situé sur une île de 2 kilomètres carrés très exactement équidistante de Vladivostok et de Los Angeles. C'est le milieu duPacifique. Vous y disposerez de votre plage, de votre bateau et de votre majordome privés. Votre chambre est un caisson immergé à deux mètres sous l'eau.
+					</p>
 				</div>
+
+				<!-- Reservation (ID vers formulaire)-->
 				<a href="#reservation" class="primary-btn">Reserver</a>
 			</div>
 		</article>
