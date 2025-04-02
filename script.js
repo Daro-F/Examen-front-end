@@ -23,15 +23,13 @@ burger.addEventListener('click', function () {
   header.classList.toggle('menu-hide');
 
   if (headerLeft.classList.contains('open')) {
-    burger.style.pointerEvents = 'none';
     header.classList.remove('hidden');
     closeBtn.style.display = 'block';
+
   } else {
-    burger.style.pointerEvents = 'auto';
-    header.classList.add('hidden');
-    closeBtn.style.display = 'none';
   }
 });
+
 
 closeBtn.addEventListener('click', function () {
   headerLeft.classList.remove('open');
@@ -46,3 +44,22 @@ closeBtn.addEventListener('click', function() {
     burger.style.pointerEvents = 'auto';
 });
 
+function updateHeaderBackgroundOnScroll() {
+  const isMobile = window.innerWidth < 1260;
+  const hasScrolledPastBanner = window.scrollY > window.innerHeight;
+
+  if (isMobile && hasScrolledPastBanner) {
+    header.style.backgroundColor = '#363A2B';
+  } else {
+    header.style.backgroundColor = 'transparent';
+  }
+}
+
+// Rafraîchir au scroll
+window.addEventListener('scroll', updateHeaderBackgroundOnScroll);
+
+// Rafraîchir au redimensionnement
+window.addEventListener('resize', updateHeaderBackgroundOnScroll);
+
+// Rafraîchir au chargement initial
+window.addEventListener('DOMContentLoaded', updateHeaderBackgroundOnScroll);
