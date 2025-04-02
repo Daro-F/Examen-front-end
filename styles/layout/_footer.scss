@@ -83,4 +83,14 @@
         }
     }
 }
-  
+
+@media screen and (max-width: 1260px) {
+    .footer-container {
+        @include flex(column, center, center, 2rem);
+
+        .footer-column {
+            @include flex(column, center, flex-start, 2rem);
+            width: 100%;
+        }
+    }
+}

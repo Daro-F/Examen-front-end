@@ -321,6 +321,23 @@ header .header-right a:hover::after {
   background-color: #3e4a2f;
 }
 
+@media screen and (max-width: 1260px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .footer-container .footer-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+  }
+}
 .hero-search {
   position: absolute;
   bottom: 0;
@@ -465,7 +482,7 @@ header .header-right a:hover::after {
 .about .about-columns .about-container .content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   line-height: 1.6;
@@ -541,6 +558,7 @@ header .header-right a:hover::after {
   .about .about-columns {
     flex-direction: column;
     gap: 4rem;
+    padding: 0 2rem;
   }
   .about .about-columns .about-container {
     width: 100%;
@@ -574,20 +592,15 @@ header .header-right a:hover::after {
     order: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 0;
-    text-align: center;
   }
   .creator-quote .quote-texte h3 {
     font-size: 40px;
   }
   .creator-quote .quote-texte .quote-description i {
     font-size: 2.5rem;
-  }
-  .creator-quote .quote-texte .quote-description p {
-    padding: 0 1rem;
-    text-align: justify;
   }
   .creator-quote .quote-texte .creator-name {
     font-size: 40px;
