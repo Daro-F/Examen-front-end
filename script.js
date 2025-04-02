@@ -25,7 +25,6 @@ burger.addEventListener('click', function () {
   if (headerLeft.classList.contains('open')) {
     header.classList.remove('hidden');
     closeBtn.style.display = 'block';
-
   } else {
   }
 });
@@ -49,10 +48,13 @@ function updateHeaderBackgroundOnScroll() {
   const hasScrolledPastBanner = window.scrollY > window.innerHeight;
 
   if (isMobile && hasScrolledPastBanner) {
-    header.style.backgroundColor = '#363A2B';
+    header.style.backgroundColor = '#363A2B'; // couleur mobile après scroll
+  } else if (isMobile && !hasScrolledPastBanner) {
+    header.style.backgroundColor = 'transparent'; // mobile en haut de page
   } else {
-    header.style.backgroundColor = 'transparent';
+    header.style.backgroundColor = '#E5E0DC'; // 💡 couleur fixe en desktop
   }
+  
 }
 
 // Rafraîchir au scroll
