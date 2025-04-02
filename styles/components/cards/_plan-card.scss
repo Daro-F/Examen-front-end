@@ -103,6 +103,7 @@
   
     .carousel {
         display: flex;
+        flex-direction: row-reverse;
         gap: 2rem;
         overflow-x: auto;
         overflow-y: hidden;
@@ -130,7 +131,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1260px) {
     .hotel-card,
     .hotel-card-reverse {
         flex-direction: column;

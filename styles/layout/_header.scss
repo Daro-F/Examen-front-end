@@ -114,7 +114,7 @@ header {
 @media screen and (max-width: 1260px) {
     header {
         @include flex(row, space-between, center);
-        padding: 4rem;
+        padding: 2rem;
         background: none;
         box-shadow: none;
 
@@ -188,7 +188,7 @@ header {
                     left: 0;
                     border: solid 1px $primary-btn-color;
                     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-                    backdrop-filter: blur(8px); // ← effet de flou
+                    backdrop-filter: blur(8px);
                     background-color: rgba($primary-background-color, 0.7);
 
                 }

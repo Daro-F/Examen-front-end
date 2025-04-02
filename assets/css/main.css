@@ -167,7 +167,7 @@ header .header-right a:hover::after {
     justify-content: space-between;
     align-items: center;
     gap: 0;
-    padding: 4rem;
+    padding: 2rem;
     background: none;
     box-shadow: none;
   }
@@ -475,7 +475,6 @@ header .header-right a:hover::after {
 }
 .about .about-columns .about-container .content .image img {
   width: 100%;
-  height: auto;
   display: block;
   object-fit: cover;
 }
@@ -538,6 +537,73 @@ header .header-right a:hover::after {
   display: block;
 }
 
+@media screen and (max-width: 1260px) {
+  .about .about-columns {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .about .about-columns .about-container {
+    width: 100%;
+  }
+  .about .about-columns .about-container h3 {
+    font-size: 40px;
+    text-align: left;
+  }
+  .about .about-columns .about-container .image {
+    order: 2;
+  }
+  .about .about-columns .about-container .image img {
+    height: 50vh;
+  }
+  .about .about-columns .about-container p {
+    order: 3;
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 1260px) {
+  .creator-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
+  }
+  .creator-quote .quote-texte {
+    width: 100%;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    text-align: center;
+  }
+  .creator-quote .quote-texte h3 {
+    font-size: 40px;
+  }
+  .creator-quote .quote-texte .quote-description i {
+    font-size: 2.5rem;
+  }
+  .creator-quote .quote-texte .quote-description p {
+    padding: 0 1rem;
+    text-align: justify;
+  }
+  .creator-quote .quote-texte .creator-name {
+    font-size: 40px;
+  }
+  .creator-quote .quote-image {
+    width: 100%;
+    height: 50vh;
+    order: 1;
+  }
+  .creator-quote .quote-image img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    display: block;
+  }
+}
 .primary-btn {
   background-color: #363A2B;
   border: none;
@@ -683,6 +749,7 @@ header .header-right a:hover::after {
 }
 .hotel-card-reverse .carousel {
   display: flex;
+  flex-direction: row-reverse;
   gap: 2rem;
   overflow-x: auto;
   overflow-y: hidden;
@@ -705,7 +772,7 @@ header .header-right a:hover::after {
   object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1260px) {
   .hotel-card,
   .hotel-card-reverse {
     flex-direction: column;
