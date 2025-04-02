@@ -1,0 +1,132 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/typography" as *;
+@use "../../abstracts/colors" as *;
+@use "../../base/global" as *;
+
+.hotel-card {
+    width: 100vw;
+    overflow: hidden;
+    font-family: $font-main;
+    @include flex (row, center, center, 12rem);
+    margin-top: 7rem;
+    padding-left: 18rem;
+
+    .hotel-container {
+        @include flex (column, center, flex-start, $head-gap);
+        width: 50%;
+
+        .hotel-name {
+            font-size: $card-font-size;
+            font-family: $font-secondary;
+        }
+
+        .hotel-rating {
+            @include flex (column,center, flex-start, 0.5rem);  
+
+            .hotel-location {
+                @include flex(row, flex-start, center, $marging)
+            }
+
+            .not {
+                color: $not-star
+            }
+        }
+    }
+
+    
+    .carousel {
+
+        @include flex(row, flex-start, flex-start, 2rem);
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            max-width: 50%;
+            width: 50%;
+            padding-bottom: 12px;
+        
+            &::-webkit-scrollbar {
+                height: 10px;
+            }
+      
+            &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: $primary-btn-color;
+            }
+        
+            &::-webkit-scrollbar-thumb:hover {
+            background-color: $secondary-btn-color;
+            }
+      
+        .carousel-img {
+            flex: 0 0 ;
+            width: 600px;
+            height: 80vh;
+            object-fit: cover;
+        }
+    }
+}   
+
+.hotel-card-reverse {
+    width: 100vw;
+    font-family: $font-main;
+    @include flex(row, center, center, 12rem);
+    margin-top: 7rem;
+    padding-right: 10rem;
+  
+    .hotel-container {
+        @include flex(column, center, flex-start, $head-gap);
+        width: 50%;
+  
+        .hotel-name {
+            font-size: $card-font-size;
+            font-family: $font-secondary;
+            white-space: nowrap;
+        }
+  
+        .hotel-rating {
+            @include flex(column, center, flex-start, 0.5rem);
+  
+            .hotel-location {
+                @include flex(row, flex-start, center, $marging);
+            }
+  
+            .not {
+            color: $not-star;
+            }
+        }
+    }
+  
+    .carousel {
+        display: flex;
+        gap: 2rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 12px;
+        flex: 1 1 0%;
+        min-width: 0;
+        width: 50%;
+        max-width: 50%;
+      
+            &::-webkit-scrollbar {
+            height: 10px;
+            }
+      
+            &::-webkit-scrollbar-thumb {
+            background-color: $primary-btn-color;
+            border-radius: 10px;
+            }
+        
+            &::-webkit-scrollbar-thumb:hover {
+            background-color: $secondary-btn-color;
+            }
+      
+        .carousel-img {
+            flex: 0 0 ;
+            min-width: 600px;
+            height: 80vh;
+            object-fit: cover;
+        }
+    }
+}
+  

@@ -11,10 +11,6 @@
     color: $btn-text-color;
     cursor: pointer;
     transition: color 0.3s ease, background-color 0.5s ease;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 80%);
     font-size: $btn-text-size;
 
     &:hover {
