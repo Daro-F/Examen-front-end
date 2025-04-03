@@ -35,6 +35,7 @@
 @use "components/carousel";
 @use "components/dropdown";
 @use "components/pagination";
+@use "components/video-banner";
 //  Import des pages spécifiques
 @use "pages/home";
 @use "pages/about";
@@ -49,3 +50,4 @@
 @use "utils/spacing";
 @use "utils/accessibility";
 @use "utils/helpers";
+

@@ -5,12 +5,11 @@
 @use "../../base/global" as *;
 
 .services-supplementaires {
+    @include flex (column, flex-start, flex-start, 4rem);
     padding-left: $main-pading;
-    margin-top: 4rem;
+    margin: 4rem 0;
   
     .service-title {
-        margin-bottom: 3rem;
-  
         h3 {
             margin-bottom: 1rem;
         }
@@ -28,6 +27,7 @@
         user-select: none;
         cursor: grab;
         scrollbar-width: none;
+        width: 100%;
 
         &.drag {
             cursor: grabbing;
@@ -48,6 +48,7 @@
         height: 350px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         user-select: none;
+        flex: 0 0 auto;
         
         &::after {
             content: "";
@@ -86,7 +87,7 @@
     
             p {
                 font-size: $primary-font-size;
-                max-width: 300px;
+                max-width: 500px;
                 font-family: $font-main;
                 color: $primary-background-color;
             }

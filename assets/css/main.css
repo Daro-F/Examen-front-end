@@ -897,11 +897,13 @@ header .header-right a:hover::after {
 }
 
 .services-supplementaires {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4rem;
   padding-left: 18rem;
-  margin-top: 4rem;
-}
-.services-supplementaires .service-title {
-  margin-bottom: 3rem;
+  margin: 4rem 0;
 }
 .services-supplementaires .service-title h3 {
   margin-bottom: 1rem;
@@ -921,6 +923,7 @@ header .header-right a:hover::after {
   user-select: none;
   cursor: grab;
   scrollbar-width: none;
+  width: 100%;
 }
 .services-supplementaires .service-list.drag {
   cursor: grabbing;
@@ -937,6 +940,7 @@ header .header-right a:hover::after {
   height: 350px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   user-select: none;
+  flex: 0 0 auto;
 }
 .services-supplementaires .service::after {
   content: "";
@@ -976,7 +980,7 @@ header .header-right a:hover::after {
 }
 .services-supplementaires .service .overlay p {
   font-size: 20px;
-  max-width: 300px;
+  max-width: 500px;
   font-family: "Karla";
   color: #E5E0DC;
 }
@@ -984,6 +988,18 @@ header .header-right a:hover::after {
   font-size: 20px;
   font-weight: bold;
   font-family: "Karla";
+}
+
+.video-banner {
+  width: 100vw;
+  height: 600px;
+  margin: 4rem 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
