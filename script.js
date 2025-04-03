@@ -70,33 +70,37 @@ carousels.forEach(function (carousel) {                                         
 });
 
 // ===================== SCROLL AU SUIVI DE LA SOURIS SUR SERVICE-LIST =====================//
-const listeServices = document.querySelector(".service-list");                                  // Récupère le conteneur des cartes service
+const listeServices = document.querySelectorAll(".service-list");                                  // Récupère le conteneur des cartes service
+console.log(listeServices);
 
-let sourisAppuyee = false;                                                                      // Est-ce que la souris est enfoncée ? Initialement non
-let positionDepartX;                                                                            // Position X au moment du clic
-let scrollInitial;                                                                              // Position de scroll avant le déplacement
+let sourisAppuyee = false;                                                                        // Est-ce que la souris est enfoncée ? Initialement non
+let positionDepartX;                                                                              // Position X au moment du clic
+let scrollInitial;                                                                                // Position de scroll avant le déplacement
 
-listeServices.addEventListener("mousedown", function (e) {
-  sourisAppuyee = true;                                                                         // Active le glissement
-  listeServices.classList.add("drag");                                                          // Change le curseur de la souris
-  positionDepartX = e.pageX - listeServices.offsetLeft;                                         // Enregistre la position X du clic
-  scrollInitial = listeServices.scrollLeft;                                                     // Enregistre le scroll de base
-});
+listeServices.forEach((list) => {
+  list.addEventListener("mousedown", function (e) {
+    sourisAppuyee = true;                                                                         // Active le glissement
+    list.classList.add("drag");                                                                   // Change le curseur de la souris
+    positionDepartX = e.pageX - list.offsetLeft;                                                  // Enregistre la position X du clic
+    scrollInitial = list.scrollLeft;                                                              // Enregistre le scroll de base
+  });
 
-listeServices.addEventListener("mouseleave", function () {                                      // Ecoute si la souris sort
-  sourisAppuyee = false;                                                                        // Si la souris sort, on arrête
-  listeServices.classList.remove("drag");                                                       // Change le curseur de la souris
-});
+  list.addEventListener("mouseleave", function () {                                               // Ecoute si la souris sort
+    sourisAppuyee = false;                                                                        // Si la souris sort, on arrête
+    list.classList.remove("drag");                                                                // Change le curseur de la souris
+  });
 
-listeServices.addEventListener("mouseup", function () {                                         // Ecoute si la souris est appuyé
-  sourisAppuyee = false;                                                                        // Quand on relâche, on arrête
-  listeServices.classList.remove("drag");                                                       // Change le curseur de la souris
-});
+  list.addEventListener("mouseup", function () {                                                  // Ecoute si la souris est appuyé
+    sourisAppuyee = false;                                                                        // Quand on relâche, on arrête
+    list.classList.remove("drag");                                                                // Change le curseur de la souris
+  });
 
-listeServices.addEventListener("mousemove", function (e) {                                      // Ecoute si la souris bouge
-  if (!sourisAppuyee)                                                                           // Si on ne clique pas,
-  return;                                                                                       // Rien ne se passe
-  const positionX = e.pageX - listeServices.offsetLeft;                                         // Nouvelle position X (en fonction de la distance)
-  const distance = (positionX - positionDepartX) * 1.5;                                         // Calcule la distance de glissement (x1.5 pour augmenter la vitesse)
-  listeServices.scrollLeft = scrollInitial - distance;                                          // Scroll le conteneur selon le mouvement
+  list.addEventListener("mousemove", function (e) {                                               // Ecoute si la souris bouge
+    if (!sourisAppuyee)                                                                           // Si on ne clique pas,
+    return;                                                                                       // Rien ne se passe
+    console.log(e);
+    const positionX = e.pageX - list.offsetLeft;                                                  // Nouvelle position X (en fonction de la distance)
+    const distance = (positionX - positionDepartX) * 1.5;                                         // Calcule la distance de glissement (x1.5 pour augmenter la vitesse)
+    list.scrollLeft = scrollInitial - distance;                                                   // Scroll le conteneur selon le mouvement
+  });
 });
