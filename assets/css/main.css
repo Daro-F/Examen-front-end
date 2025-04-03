@@ -408,6 +408,9 @@ header .header-right a:hover::after {
     align-items: center;
     gap: 0;
   }
+  .hero-search .serch-box form h2 {
+    align-items: center;
+  }
 }
 .hero {
   position: relative;
@@ -699,20 +702,14 @@ header .header-right a:hover::after {
   padding-bottom: 12px;
 }
 .hotel-card .carousel::-webkit-scrollbar {
-  height: 10px;
-}
-.hotel-card .carousel::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #363A2B;
-}
-.hotel-card .carousel::-webkit-scrollbar-thumb:hover {
-  background-color: #4F6234;
+  display: none;
 }
 .hotel-card .carousel .carousel-img {
-  flex: 0 0;
+  flex: 0 0 auto;
   width: 600px;
   height: 80vh;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .hotel-card-reverse {
@@ -768,20 +765,14 @@ header .header-right a:hover::after {
   padding-bottom: 12px;
 }
 .hotel-card-reverse .carousel::-webkit-scrollbar {
-  height: 10px;
-}
-.hotel-card-reverse .carousel::-webkit-scrollbar-thumb {
-  background-color: #363A2B;
-  border-radius: 10px;
-}
-.hotel-card-reverse .carousel::-webkit-scrollbar-thumb:hover {
-  background-color: #4F6234;
+  display: none;
 }
 .hotel-card-reverse .carousel .carousel-img {
   flex: 0 0 auto;
   width: 600px;
   height: 80vh;
   object-fit: cover;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1260px) {
@@ -829,6 +820,70 @@ header .header-right a:hover::after {
   .hotel-card {
     flex-direction: column-reverse;
   }
+}
+.offer-container {
+  padding: 4rem 18rem;
+}
+.offer-container h3 {
+  font-size: 48px;
+  font-family: "Playfair";
+  font-weight: bold;
+}
+.offer-container .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+  margin-top: 4rem;
+}
+.offer-container .offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 500px;
+  flex: 1 1 45%;
+  height: 100%;
+  align-self: stretch;
+}
+.offer-container .offer img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.offer-container .offer h4 {
+  font-size: 30px;
+  font-family: "Playfair";
+  font-weight: bold;
+}
+.offer-container .offer p {
+  font-size: 20px;
+  font-family: "Karla";
+}
+.offer-container .offer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.offer-container .offer > div div {
+  flex: 1;
+}
+.offer-container .offer > div div ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.offer-container .offer > div div ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Examen final Front-End</title>
+	<meta name="description" content="Découvrez les hôtels d'exceptions 4 Éléments.">
+	<link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<link rel="icon" href="../assets/images/ui/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+	<header id="header">
+
+		<!--Header GAUCHE-->
+		<div class="header-left">
+			<a href="../index.html">
+
+				<!-- LOGO -->
+				<img src="../assets/images/ui/logo-noir.png" alt="logo (4 elements hotels inouïs partout dans le monde) de couleur noir" title="Retour à l'accueil">
+			</a>
+
+			<!-- Burger pour mobile / responsive -->
+			<div class="burger" id="burger-btn" aria-label="Menu mobile" aria-expanded="false">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		  
+			<!-- Lien vers les pages -->
+			<nav>
+				<div class="close-btn"><button class="secondary-btn">Fermer</button></div>
+			  	<ul>
+					<li><a href="../pages/feu.html" title="Hotel Feu">Feu</a></li>
+					<li><a href="../pages/air.html" title="Hotel Air">Air</a></li>
+					<li><a href="../pages/terre.html" title="Hotel Terre">Terre</a></li>
+					<li><a href="../pages/eau.html" title="Hotel Eau">Eau</a></li>
+			  	</ul>
+			</nav>
+		</div>
+		  
+		<!-- Header DROITE -->
+		<div class="header-right">
+
+			<!-- Résaux -->
+			<div class="social">
+				<a href="../pages/contact.html" title="Nous contacter">Contact</a>
+				<a href="#" title="Suivez-nous sur Instagram"><i class="fab fa-instagram"></i></a>
+				<a href="#" title="Rejoignez-nous sur Facebook"><i class="fab fa-facebook-f"></i></a>
+			</div>
+
+			<!-- Réserver / Se connecter -->
+			<div class="user-action">
+				<button class="secondary-btn">Reserver</button>
+				<a href="#">Se connecter</a>
+			</div>
+		</div>
+	</header>
+    
+    <main>
+        <section>
+			<!-------------- CARD 1 --------------->
+			<article class="hotel-card">
+				<div class="hotel-container">
+					
+					<!-- Titre de la card -->
+					<div class="hotel-info">
+						<h3 class="hotel-name">Hôtel Feu</h3>
+					</div>
+					<div class="hotel-rating">
+
+						<!--Localisation-->
+						<div class="hotel-location">
+							<i class="fa-solid fa-location-dot"></i>
+							<p>Finlande</p>
+						</div>
+
+						<!-- Dots -->
+						<div class="dots" aria-label="Note de l'hôtel : 3 sur 4">		
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star not"></i>
+							<span>(325 avis)</span>		
+						</div>
+					</div>
+
+					<!-- Description -->
+					<div>			
+						<p class="hotel-description">
+						L'hôtel Feu ne se situe bien sûr pas sur un volcan, mais en Finlande.</p>
+						<p>Feu de laterre volcanique crachant non loin de là ses geysers, feu des volcans à l'horizon et, bien entendu, feu des aurores boréales que vous pourrez admirer tous les soirs par le toit vitré de votre chambre.</p>
+					</div>
+
+					<!-- Reservation (ID vers formulaire)-->
+					<a href="#" class="primary-btn">Reserver</a>
+				</div>
+
+				<!-- Carousel -->
+				<div class="carousel">
+					<img src="../assets/images/hotels/feu/igloos-laponie.jpg" alt="Igloos éclairés la nuit au milieu d'une forêt enneigée" class="carousel-img">				
+					<img src="../assets/images/hotels/feu/nuit-nordique.jpg" alt="Chalet nordique sous la neige avec aurores boréales dans le ciel" class="carousel-img">
+					<img src="../assets/images/hotels/feu/village-igloos.jpg" alt="Village d'igloos éclairés en pleine forêt enneigée au crépuscule" class="carousel-img">
+				</div>					
+			</article>
+        </section>
+
+        <section>
+            <div class="offer-container">
+                <h3>Les offres de l'hôtel feu</h3>
+                <div class="row">
+
+                    <div class="offer">
+                        <img src="../assets/images/hotels/feu/village-igloos.jpg" alt="Village d'igloos éclairés en pleine forêt enneigée au crépuscule">
+                        <h4>Découvrez nos igloos et voyagez le temps d'une nuit</h4>
+                        <p>Plongez-vous dans une nuit magique où le temps semble suspendu. Nos igloos offrent une atmosphère chaleureuse et dépaysante, vous invitant à vivre une aventure hors du commun. Chaque détail a été soigneusement pensé pour créer une escapade mémorable. Profitez de l'intimité et du confort de nos hébergements glacés tout en vous laissant imprégner par la beauté éphémère de cet environnement. Offrez-vous une nuit inoubliable dans nos igloos, une expérience qui restera gravée dans vos souvenirs.</p>
+                        <div>
+                            <div>
+                                <ul>
+                                    <li><i class="fa-solid fa-soap"></i>SPA</li>
+                                    <li><i class="fa-solid fa-car"></i>Parking</li>
+                                    <li><i class="fa-solid fa-snowflake"></i>Climatisation</li>    
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                <li><i class="fa-solid fa-water"></i>Piscine</li>
+                                <li><i class="fa-solid fa-dumbbell"></i>Salle de sport</li>
+                                <li><i class="fa-solid fa-bus"></i>Transport aéroport</li> 
+                                </ul>
+                            </div>
+                        </div>
+                        <p>+ de détail</p>
+                        <p>à partir de 500€ / nuit</p>
+                        <button class="secondary-btn">Reserver</button>
+                    </div>
+
+                    <div class="offer">
+                        <img src="../assets/images/services/suite-luxueuse.jpg" alt="Village d'igloos éclairés en pleine forêt enneigée au crépuscule">
+                        <h4>Découvrez la suite Laponie et voyagez le temps d'une nuit</h4>
+                        <p>Voyagez le temps d'une nuit à travers un hébergement exceptionnel qui évoque la magie et l'authenticité de la Laponie. La suite offre un mélange enchanteur de confort luxueux et d'éléments inspirés de la nature environnante. Imprégnez-vous de l'atmosphère enchanteresse de la Laponie tout en profitant du luxe et de l'intimité de notre suite. Offrez-vous une nuit extraordinaire dans la suite Laponie de l'hôtel Feu, où chaques moment promet d'être magique et mémorable.</p>
+                        <div>
+                            <div>
+                                <ul>
+                                    <li><i class="fa-solid fa-soap"></i>SPA</li>
+                                    <li><i class="fa-solid fa-car"></i>Parking</li>
+                                    <li><i class="fa-solid fa-snowflake"></i>Climatisation</li>    
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                <li><i class="fa-solid fa-water"></i>Piscine</li>
+                                <li><i class="fa-solid fa-dumbbell"></i>Salle de sport</li>
+                                <li><i class="fa-solid fa-bus"></i>Transport aéroport</li> 
+                                </ul>
+                            </div>
+                        </div>
+                        <p>+ de détail</p>
+                        <p>à partir de 850€ / nuit</p>
+                        <button class="secondary-btn">Reserver</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+</body>
+</html>
