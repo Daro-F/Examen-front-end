@@ -7,12 +7,6 @@
 .offer-container {
   padding: $second-padding;
 
-    h3 {
-        font-size: $h3-size;
-        font-family: $font-secondary;
-        font-weight: bold
-    }
-
     .row {
         @include flex(row, space-between, flex-start, 0);
         margin-top: 4rem;
@@ -37,9 +31,19 @@
                 font-weight: bold
             }
 
+            a {
+                font-size: 1rem;
+                font-family: $font-main;
+                color: $secondary-btn-color;
+            }
+
             p {
                 font-size: $primary-font-size;
                 font-family: $font-main;
+
+                strong {
+                    font-weight: bold;
+                }
             }
 
             > div {
@@ -56,6 +60,7 @@
                     li {
                         @include flex (row, flex-start, center, 1rem);
                         margin-bottom: 0.5rem;
+                        font-family: $font-main;
                     }
                 }
             }

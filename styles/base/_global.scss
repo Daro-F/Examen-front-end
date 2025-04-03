@@ -27,3 +27,9 @@ body {
 p {
     font-size: $primary-font-size;
 }
+
+h3 {
+    font-size: $h3-size;
+    font-family: $font-secondary;
+    font-weight: bold
+}
