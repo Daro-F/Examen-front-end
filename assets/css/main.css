@@ -1002,4 +1002,70 @@ header .header-right a:hover::after {
   gap: 0;
 }
 
+.avis-client {
+  padding: 0 18rem;
+  margin-bottom: 7rem;
+}
+.avis-client h2 {
+  font-size: 30px;
+  margin-bottom: 2rem;
+  font-family: "Playfair";
+}
+.avis-client .avis-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+}
+.avis-client .avis {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 600px;
+}
+.avis-client .avis .auteur {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.avis-client .avis .auteur img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.avis-client .avis .auteur .dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+}
+.avis-client .avis .auteur div strong {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+  font-size: 20px;
+  font-family: "Karla";
+}
+.avis-client .avis .auteur div span {
+  font-size: 15px;
+  margin-left: 1rem;
+}
+.avis-client .avis .auteur div p {
+  font-size: 20px;
+  font-family: "Karla";
+}
+.avis-client .avis p {
+  font-size: 20px;
+  font-family: "Karla";
+}
+
 /*# sourceMappingURL=main.css.map */

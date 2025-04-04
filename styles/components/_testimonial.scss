@@ -1,0 +1,65 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/colors" as *;
+@use "../base/global" as *;
+
+
+.avis-client {
+    padding: $main-pading0;
+    margin-bottom: $marging-top;
+  
+    h2 {
+        font-size: $h4-size;
+        margin-bottom: 2rem;
+        font-family: $font-secondary;
+    }
+  
+    .avis-list {
+        @include flex (row, space-between, stretch, 2rem);
+    }
+  
+    .avis {
+        @include flex (column, flex-start, flex-start, 1rem);
+        max-width: 600px;
+  
+        .auteur {
+            @include flex (row, flex-start, center, 1rem);
+    
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .dots {
+                @include flex(row, flex-start, center, 0);
+            }
+              
+            div {
+                strong {
+                    @include flex (column, flex-start, flex-start, 0);
+                    font-size: $primary-font-size;
+                    font-family: $font-main;
+                }
+  
+                span {
+                    font-size: $secondary-font-size;
+                    margin-left: 1rem;
+                }
+  
+                p {
+                    font-size: $primary-font-size;
+                    font-family: $font-main;
+                }
+            }
+        }
+  
+        p {
+            font-size: $primary-font-size;
+            font-family: $font-main;
+        }
+    }
+}
+  
