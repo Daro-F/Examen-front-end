@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Examen final Front-End</title>
 	<meta name="description" content="Découvrez les hôtels d'exceptions 4 Éléments.">
-	<link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<link rel="icon" href="../assets/images/ui/favicon.svg" type="image/svg+xml">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -25,7 +25,7 @@
 			</a>
 
 			<!-- Burger pour mobile / responsive -->
-			<div class="burger" id="burger-btn" aria-label="Menu mobile" aria-expanded="false">
+			<div class="burger" id="burger-btn" aria-expanded="false" >
 				<span></span>
 				<span></span>
 				<span></span>
@@ -55,7 +55,7 @@
 
 			<!-- Réserver / Se connecter -->
 			<div class="user-action">
-				<button class="secondary-btn">Reserver</button>
+				<button class="secondary-btn open-modal-btn">Reserver</button>
 				<a href="#">Se connecter</a>
 			</div>
 		</div>
@@ -63,7 +63,7 @@
     
     <main>
         <section>
-			<!-------------- CARD 1 --------------->
+			<!-- CARD 1 -->
 			<article class="hotel-card">
 				<div class="hotel-container">
 					
@@ -80,7 +80,7 @@
 						</div>
 
 						<!-- Dots -->
-						<div class="dots" aria-label="Note de l'hôtel : 3 sur 4">		
+						<div class="dots">		
 							<i class="fa-solid fa-star"></i>
 							<i class="fa-solid fa-star"></i>
 							<i class="fa-solid fa-star"></i>
@@ -276,7 +276,7 @@
                   <img src="../assets/images/personnes/gratis-png-el-risitas-internet-meme-risas-internet-foro-parodia-issou.png" alt="Photo de Avy Johnson">
                   <div>
                     <strong>Avy Johnson</strong>
-                    <div class="dots" aria-label="Note de l'hôtel : 3 sur 4">		
+                    <div class="dots">		
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -286,7 +286,7 @@
                   </div>
                 </div>
                 <p>
-                  Tout simplement exceptionnel. Le personnel était incroyablement attentionné et chaleureux, toujours prêt à répondre à mes besoins. La suite Laponie était décorée avec élégance, offrant un mélange parfait de confort moderne et d’ambiance nordique. Une expérience mémorable que je recommande vivement.
+                  Tout simplement exceptionnel. Le personnel était incroyablement attentionné et chaleureux, toujours prêt à répondre à mes besoins. La suite Laponie était décorée avec élégance, offrant un mélange parfait de confort moderne et d'ambiance nordique. Une expérience mémorable que je recommande vivement.
                 </p>
               </article>
           
@@ -305,7 +305,7 @@
                   </div>
                 </div>
                 <p>
-                  Mon séjour dans les igloos de l'hôtel Feu a été tout simplement magique. L’expérience de passer une nuit dans ces hébergements uniques était à couper le souffle. Les igloos offrent une ambiance cosy et chaleureuse, malgré le froid extérieur, grâce à leur conception bien pensée. Les vues sur le ciel étoilé depuis le dôme de glace étaient à couper le souffle.
+                  Mon séjour dans les igloos de l'hôtel Feu a été tout simplement magique. L'expérience de passer une nuit dans ces hébergements uniques était à couper le souffle. Les igloos offrent une ambiance cosy et chaleureuse, malgré le froid extérieur, grâce à leur conception bien pensée. Les vues sur le ciel étoilé depuis le dôme de glace étaient à couper le souffle.
                 </p>
               </article>
             </div>
@@ -314,6 +314,95 @@
 
         <section></section>
     </main>
+
+    <div class="modal-overlay">
+        <div class="modal">
+          <button class="modal-close">✕</button>
+          <h2>Réserver une chambre</h2>
+          <form action="#">
+      
+            <!-- Nom / Prénom / Téléphone -->
+            <div class="row">
+              <div>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom">
+              </div>
+              <div>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom">
+              </div>
+              <div>
+                <label for="tel">Téléphone :</label>
+                <input type="tel" id="tel" name="tel">
+              </div>
+            </div>
+      
+            <!-- Email -->
+            <div>
+              <label for="email">Email :</label>
+              <input type="email" id="email" name="email">
+            </div>
+      
+            <!-- Choix de l'hôtel -->
+            <div>
+              <label for="hotel">Choix de l'hôtel :</label>
+              <select id="hotel" name="hotel">
+                <option value="feu">Hôtel Feu</option>
+                <option value="eau">Hôtel Eau</option>
+                <option value="terre">Hôtel Terre</option>
+                <option value="air">Hôtel Air</option>
+              </select>
+            </div>
+      
+            <!-- Dates -->
+            <div class="row">
+              <div>
+                <label for="arrivee">Date d'arrivée :</label>
+                <input type="date" id="arrivee" name="arrivee">
+              </div>
+              <div>
+                <label for="depart">Date de départ :</label>
+                <input type="date" id="depart" name="depart">
+              </div>
+            </div>
+      
+            <!-- Nombre de personnes -->
+            <div>
+              <label for="personnes">Nombre de personnes :</label>
+              <input type="number" id="personnes" name="personnes" min="1" max="10" value="2">
+            </div>
+      
+            <!-- Services & Activités -->
+            <div class="row">
+              <fieldset>
+                <legend>Services supplémentaires</legend>
+                <label><input type="checkbox" name="services" value="chauffeur"> Chauffeur <span>(11€/J)</span></label>
+                <label><input type="checkbox" name="services" value="dejeuner"> Déjeuner <span>(15€/J)</span></label>
+                <label><input type="checkbox" name="services" value="repas"> Repas <span>(15€/J)</span></label>
+                <label><input type="checkbox" name="services" value="visite"> Visite guidée <span>(15€/J)</span></label>
+              </fieldset>
+      
+              <fieldset>
+                <legend>Activités (selon disponibilités)</legend>
+                <label><input type="checkbox" name="activites" value="chien"> Chien de traineaux</label>
+                <label><input type="checkbox" name="activites" value="rando"> Randonnée en raquettes</label>
+                <label><input type="checkbox" name="activites" value="volcan"> Découverte des volcans</label>
+                <label><input type="checkbox" name="activites" value="speleo"> Spéléologie</label>
+              </fieldset>
+            </div>
+      
+            <!-- Infos complémentaires -->
+            <div>
+              <label for="message">Informations complémentaires :</label>
+              <textarea id="message" name="message" rows="4" placeholder="Besoin particulier, arrivée tardive, etc."></textarea>
+            </div>
+      
+            <!-- Bouton -->
+            <button type="submit" class="primary-btn">Envoyer la réservation</button>
+          </form>
+        </div>
+      </div>
+      
     <script src="../script.js"></script>
 
 </body>
