@@ -1,0 +1,20 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/typography" as *;
+@use "../../abstracts/colors" as *;
+@use "../../base/global" as *;
+
+.reset-btn {
+    background-color: $reset-color;
+    border: none;
+    padding: $btn-padding;
+    border-radius: $btn-radius;
+    color: $btn-text-color;
+    font-size: $primary-font-size;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.5s ease;
+
+    &:hover {
+        background-color: $reset-color-hover;
+    }
+}

@@ -317,91 +317,95 @@
 
     <div class="modal-overlay">
         <div class="modal">
-          <button class="modal-close">✕</button>
-          <h2>Réserver une chambre</h2>
-          <form action="#">
+            <button class="modal-close" id="closeBtn">✕</button>
+            <h2>Réserver une chambre</h2>
+            <form action="#" id="modal-form">
       
             <!-- Nom / Prénom / Téléphone -->
             <div class="row">
-              <div>
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom">
-              </div>
-              <div>
-                <label for="prenom">Prénom :</label>
-                <input type="text" id="prenom" name="prenom">
-              </div>
-              <div>
-                <label for="tel">Téléphone :</label>
-                <input type="tel" id="tel" name="tel">
-              </div>
+                <div>
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom">
+                </div>
+                <div>
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom">
+                </div>
+                <div>
+                    <label for="tel">Téléphone :</label>
+                    <input type="tel" id="tel" name="tel">
+                </div>
             </div>
       
             <!-- Email -->
             <div>
-              <label for="email">Email :</label>
-              <input type="email" id="email" name="email">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email">
             </div>
       
             <!-- Choix de l'hôtel -->
             <div>
-              <label for="hotel">Choix de l'hôtel :</label>
-              <select id="hotel" name="hotel">
-                <option value="feu">Hôtel Feu</option>
-                <option value="eau">Hôtel Eau</option>
-                <option value="terre">Hôtel Terre</option>
-                <option value="air">Hôtel Air</option>
-              </select>
+                <label for="hotel">Choix de l'hôtel :</label>
+                <select id="hotel" name="hotel">
+                    <option value=""></option>
+                    <option value="feu">Hôtel Feu</option>
+                    <option value="eau">Hôtel Eau</option>
+                    <option value="terre">Hôtel Terre</option>
+                    <option value="air">Hôtel Air</option>
+                </select>
             </div>
       
             <!-- Dates -->
             <div class="row">
-              <div>
-                <label for="arrivee">Date d'arrivée :</label>
-                <input type="date" id="arrivee" name="arrivee">
-              </div>
-              <div>
-                <label for="depart">Date de départ :</label>
-                <input type="date" id="depart" name="depart">
-              </div>
+                <div>
+                    <label for="arrivee">Date d'arrivée :</label>
+                    <input type="date" id="arrivee" name="arrivee">
+                </div>
+                <div>
+                    <label for="depart">Date de départ :</label>
+                    <input type="date" id="depart" name="depart">
+                </div>
             </div>
       
             <!-- Nombre de personnes -->
             <div>
-              <label for="personnes">Nombre de personnes :</label>
-              <input type="number" id="personnes" name="personnes" min="1" max="10" value="2">
+                <label for="personnes">Nombre de personnes :</label>
+                <input type="number" id="personnes" name="personnes" min="1" max="10" value="2">
             </div>
       
             <!-- Services & Activités -->
             <div class="row">
-              <fieldset>
-                <legend>Services supplémentaires</legend>
-                <label><input type="checkbox" name="services" value="chauffeur"> Chauffeur <span>(11€/J)</span></label>
-                <label><input type="checkbox" name="services" value="dejeuner"> Déjeuner <span>(15€/J)</span></label>
-                <label><input type="checkbox" name="services" value="repas"> Repas <span>(15€/J)</span></label>
-                <label><input type="checkbox" name="services" value="visite"> Visite guidée <span>(15€/J)</span></label>
-              </fieldset>
+                <fieldset>
+                    <legend>Services supplémentaires</legend>
+                    <label><input type="checkbox" name="services" value="chauffeur"> Chauffeur <span>11€ / j</span></label>
+                    <label><input type="checkbox" name="services" value="dejeuner"> Déjeuner <span>15€ / j</span></label>
+                    <label><input type="checkbox" name="services" value="repas"> Repas <span>15€ / j</span></label>
+                    <label><input type="checkbox" name="services" value="visite"> Visite guidée <span>15€ / j</span></label>
+                </fieldset>
       
-              <fieldset>
-                <legend>Activités (selon disponibilités)</legend>
-                <label><input type="checkbox" name="activites" value="chien"> Chien de traineaux</label>
-                <label><input type="checkbox" name="activites" value="rando"> Randonnée en raquettes</label>
-                <label><input type="checkbox" name="activites" value="volcan"> Découverte des volcans</label>
-                <label><input type="checkbox" name="activites" value="speleo"> Spéléologie</label>
-              </fieldset>
+                <fieldset>
+                    <legend>Activités (selon disponibilités)</legend>
+                    <label><input type="checkbox" name="activites" value="chien"> Chien de traineaux</label>
+                    <label><input type="checkbox" name="activites" value="rando"> Randonnée en raquettes</label>
+                    <label><input type="checkbox" name="activites" value="volcan"> Découverte des volcans</label>
+                    <label><input type="checkbox" name="activites" value="speleo"> Spéléologie</label>
+                </fieldset>
             </div>
       
             <!-- Infos complémentaires -->
             <div>
-              <label for="message">Informations complémentaires :</label>
-              <textarea id="message" name="message" rows="4" placeholder="Besoin particulier, arrivée tardive, etc."></textarea>
+                <label for="message">Informations complémentaires :</label>
+                <input id="message" name="message" placeholder="Besoin particulier, arrivée tardive, etc.">
             </div>
       
             <!-- Bouton -->
-            <button type="submit" class="primary-btn">Envoyer la réservation</button>
-          </form>
+            <div class="button">
+                <button type="submit" class="secondary-btn">Envoyer la réservation</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+            </form>
         </div>
-      </div>
+    </div>
       
     <script src="../script.js"></script>
 

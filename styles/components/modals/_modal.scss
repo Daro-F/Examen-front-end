@@ -1,0 +1,197 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/typography" as *;
+@use "../../abstracts/colors" as *;
+@use "../../base/global" as *;
+
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/typography" as *;
+@use "../../abstracts/colors" as *;
+@use "../../base/global" as *;
+
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/typography" as *;
+@use "../../abstracts/colors" as *;
+@use "../../base/global" as *;
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+  padding: 1rem;
+  font-family: $font-secondary;
+
+  &.active {
+    display: flex;
+  }
+
+  .modal {
+    background: $primary-background-color;
+    border-radius: 2rem;
+    padding: 2rem;
+    max-width: 850px;
+    width: 100%;
+    max-height: 95vh;
+    position: relative;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+      }   
+
+    h2 {
+      margin-bottom: 1.5rem;
+      font-family: $font-main;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.6s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &:hover {
+        animation: rotate180 0.6s ease;
+        color: $secondary-btn-color;
+      }
+    }
+
+    #fermerText {
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      white-space: nowrap;
+      font-size: 1rem;
+      pointer-events: none;
+    }
+
+    form {
+      @include flex(column, flex-start, stretch, 1rem);
+
+      label {
+        display: block;
+        margin-bottom: 0.3rem;
+        font-weight: bold;
+        font-family: $font-secondary;
+      }
+
+      input,
+      select,
+      textarea {
+        padding: 0.6rem 1rem;
+        font-size: $secondary-font-size;
+        border-radius: 8px;
+        border: 1px solid $primary-background-color;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      // ✅ Organisation en ligne pour les champs groupés
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        width: 100%;
+
+        div,
+        fieldset {
+          flex: 1;
+          min-width: 240px;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      fieldset {
+        border: 1px solid $primary-background-color;
+        border-radius: 0.5rem;
+        padding: 1rem;
+
+        legend {
+          font-weight: bold;
+        }
+
+        label {
+          @include flex(row-reverse, space-between, flex-start, 0);
+          font-weight: normal;
+          white-space: nowrap;
+          cursor: pointer;
+          font-family: $font-main;
+        }
+
+        input[type="checkbox"] {
+          cursor: pointer;
+        }
+      } 
+
+      #message, #email, #hotel {
+        display: block;
+        width: 100%;
+    }
+
+
+      .button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+
+        button {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate180 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.success-message {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    animation: fadeSuccess 0.3s ease-in-out forwards;
+  }
+  
+  @keyframes fadeSuccess {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
