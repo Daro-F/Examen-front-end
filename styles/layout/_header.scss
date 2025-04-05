@@ -58,6 +58,12 @@ header {
                         &:hover::after {
                           width: 100%;
                         }
+
+                        &.active {
+                            color: $secondary-btn-color;
+                            font-weight: bold;
+                            border-bottom: 2px solid $secondary-btn-color;
+                        }
                     }          
                 }
             }

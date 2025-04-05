@@ -7,12 +7,9 @@
 
 .avis-client {
     padding: $main-pading0;
-    margin-bottom: $marging-top;
+
   
-    h2 {
-        font-size: $h4-size;
-        margin-bottom: 2rem;
-        font-family: $font-secondary;
+    h3 {
     }
   
     .avis-list {
@@ -20,7 +17,7 @@
     }
   
     .avis {
-        @include flex (column, flex-start, flex-start, 1rem);
+        @include flex (column, space-between, flex-start, 1rem);
         max-width: 600px;
   
         .auteur {

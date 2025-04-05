@@ -38,6 +38,24 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('resize', updateHeaderBackgroundOnScroll);                              // Appel la function à chaque redimension de la page
 
 
+    // ===================== AFFICHER DANS LE HEADER LA PAGE ACTUEL =====================//
+
+    const currentPage = window.location.pathname.split("/").pop();                                  // Récupère le nom du fichier de la page actuelle (ex: "feu.html")
+    const navLinks = document.querySelectorAll("nav a");                                            // Sélectionne tous les liens de navigation dans le header
+    
+    for (let i = 0; i < navLinks.length; i++) {                                                     // Parcourt tous les liens de navigation
+        const link = navLinks[i];                                                                   // Récupère le lien actuel
+        const href = link.getAttribute("href").split("/").pop();                                    // Récupère uniquement le nom de fichier du lien (ex: "feu.html")
+    
+        console.log("🔎 Test lien : " + href + " VS page : " + currentPage);                        // (Debug avec la console) Confirme que le lien est bon
+    
+        if (href === currentPage) {                                                                 // Si le lien correspond à la page actuelle
+            link.classList.add("active");                                                           // Ajoute la classe "active" au lien
+            console.log("✅ Lien actif détecté : " + href);                                         // (Debug avec la console) Confirme dans la console que le lien actif a été trouvé
+            break;                                                                                  // Stoppe la boucle
+        }                                                                            ///////////////// Probablement incompatible avec GitHubPage a cause de chemin du lien
+    }
+
     // ===================== BOUTON BURGER =====================//
 
     burger.addEventListener('click', function () {                                                  // Ecoute quand il y a un clique sur le burger                                           
