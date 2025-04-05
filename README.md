@@ -36,7 +36,6 @@ J’ai respecté une organisation claire et scalable :
 ## Déploiement
 
 Le site est compatible avec un déploiement GitHub Pages.  
-Lien de prévisualisation (à ajouter) 👉 [https://tonpseudo.github.io/nom-du-projet](#)
 
 ## Remarques perso
 
